@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		<!-- Required meta tags -->
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, 
+maximum-scale=1.0, user-scalable=no" /> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+        <title>Kaksha For You</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="/assets/vendors/linericon/style.css">
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="/assets/vendors/nice-select/css/nice-select.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />  
+        <!-- main css -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="stylesheet" href="/assets/css/responsive.css">
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script> 
+            $(document).ready(function() { 
+                $("#but").click(function() { 
+                    if ($("input[type=checkbox]").prop( 
+                      ":checked")) { 
+                        alert("Check box in Checked"); 
+                    } else { 
+                        alert("Check box is Unchecked"); 
+                    } 
+                }); 
+            }); 
+        </script>
+    </head>
+<body style="background: #005AA7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFDE4, #005AA7);">
+
+<header class="header_area">
+  <div class="main_menu">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          
+          <button style="z-index: 1000;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span style="z-index: 1000;" class="icon-bar"></span>
+            <span style="z-index: 1000;" class="icon-bar"></span>
+            <span style="z-index: 1000;" class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div  class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <i class="fas fa-sign-out-alt"></i>
+              <li class="nav-item"><a class="nav-link" href="/logout">Logout </a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+ 
+
+<div class="main_title">
+    <h2>Admin's Dashboard</h2>
+    <p> </p>
+</div>
+
+ 
+     
+   
+    
+<div class="col-md-12">
+  <div class="card card-user" style="margin: 80px">
+    <div class="card-header">
+      <h5 class="card-title">Student Feedback</h5>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thecad class=" text-primary">
+            <th>
+              For Faculty
+            </th>
+           
+             
+            <th class="text-left">Feedback</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <% feed.forEach(function(feeds){ %>
+                  <li>
+                    <strong>
+                      <%= feeds.name %>
+                    </strong>   
+                  </li>
+                <% }) %>
+              </td>
+             
+             
+              <td class="text-left">
+                <% feed.forEach(function(feeds){ %>
+                   
+                    <%= feeds.feedback %>   
+                  <br>
+                <% }) %>
+              </td>
+            </tr>                    
+            
+          </tbody>
+        </table>
+      </div>
+      
+        
+       
+        
+        
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <div class="col-md-12">
+    <div class="card card-user" style="margin: 80px">
+      <div class="card-header">
+        <h5 class="card-title">Student's list for fees</h5>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thecad class=" text-primary">
+              <th>
+               Name
+              </th>
+             
+              <th class="text-center">
+                Class
+              </th>
+              <th class="text-center">
+              Age
+              </th>
+              <th class="text-center">
+               Contact
+              </th>
+               
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                
+                    <li>
+                      <% dataa.forEach(function(dataas){ %>
+                        <%= dataas.name %>  
+                        <br>
+                        <% }) %>
+                    </li>
+                
+                </td>
+               
+                <td class="text-center">
+                  
+                  <% dataa.forEach(function(dataas){ %>
+                    <%= dataas.std %>  
+                    <br>
+                    <% }) %>
+                    
+                  
+                </td>
+                <td class="text-center">
+                  
+                  <% dataa.forEach(function(dataas){ %>
+                    <%= dataas.age %>  
+                    <br>
+                    <% }) %>
+                
+              </td>
+                <td class="text-center">
+                    
+                  <% dataa.forEach(function(dataas){ %>
+                    <%= dataas.contact %>  
+                    <br>
+                    <% }) %>
+                   
+                    
+                 
+                </td>
+              </tr>                    
+              
+            </tbody>
+          </table>
+
+        </div>
+        
+          
+          <div class="row">
+                
+                </form>
+          
+          
+        
+      </div>
+    </div>
+  </div>
+ 
+
+
+
+
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="/assets/js/popper.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
+	<script src="/assets/js/stellar.js"></script>
+	<script src="/assets/vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="/assets/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+	<script src="/assets/js/mail-script.js"></script>
+	<script src="/assets/js/countdown.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="/assets/js/gmaps.min.js"></script>
+	<script src="/assets/js/theme.js"></script>
+</body>
+</html>
